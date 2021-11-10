@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MySwiftVidyoIntegration" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qwg-TA-Aow">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vvr-2x-K2j">
+                                <rect key="frame" x="20" y="346" width="64.5" height="204"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="V5a-2g-dxT">
+                                        <rect key="frame" x="8" y="16" width="48.5" height="172"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQk-8b-Meg">
+                                                <rect key="frame" x="0.0" y="0.0" width="48.5" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="mic.circle.fill" catalog="system" title=" "/>
+                                                <connections>
+                                                    <action selector="onMicButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EKa-wg-fy5"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldH-uc-bKt">
+                                                <rect key="frame" x="0.0" y="47" width="48.5" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="phone.circle.fill" catalog="system" title=" "/>
+                                                <connections>
+                                                    <action selector="onCallButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wkN-Dz-HfA"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="slF-4O-W92">
+                                                <rect key="frame" x="0.0" y="94" width="48.5" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="camera.circle.fill" catalog="system" title=" "/>
+                                                <connections>
+                                                    <action selector="onCameraButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hkd-Tc-O5z"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JBR-dj-ejl">
+                                                <rect key="frame" x="0.0" y="141" width="48.5" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="camera.viewfinder" catalog="system" title=" "/>
+                                                <connections>
+                                                    <action selector="onCameraSwitchPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2qR-dL-AXt"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                <constraints>
+                                    <constraint firstItem="V5a-2g-dxT" firstAttribute="top" secondItem="vvr-2x-K2j" secondAttribute="top" constant="16" id="TEh-zs-o3A"/>
+                                    <constraint firstItem="V5a-2g-dxT" firstAttribute="leading" secondItem="vvr-2x-K2j" secondAttribute="leading" constant="8" id="dD7-x7-E12"/>
+                                    <constraint firstItem="V5a-2g-dxT" firstAttribute="centerX" secondItem="vvr-2x-K2j" secondAttribute="centerX" id="hQF-wU-JRI"/>
+                                    <constraint firstItem="V5a-2g-dxT" firstAttribute="centerY" secondItem="vvr-2x-K2j" secondAttribute="centerY" id="o54-a0-QCR"/>
+                                    <constraint firstAttribute="trailing" secondItem="V5a-2g-dxT" secondAttribute="trailing" constant="8" id="o6h-a6-M1N"/>
+                                    <constraint firstAttribute="bottom" secondItem="V5a-2g-dxT" secondAttribute="bottom" constant="16" id="p6z-Jo-9SF"/>
+                                    <constraint firstItem="V5a-2g-dxT" firstAttribute="centerY" secondItem="vvr-2x-K2j" secondAttribute="centerY" id="sew-RQ-rAp"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qwg-TA-Aow" secondAttribute="trailing" id="IGC-Wb-cUp"/>
+                            <constraint firstItem="vvr-2x-K2j" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Q73-nN-MuT"/>
+                            <constraint firstAttribute="bottom" secondItem="qwg-TA-Aow" secondAttribute="bottom" id="T1w-7k-auN"/>
+                            <constraint firstItem="qwg-TA-Aow" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Wck-eP-n4H"/>
+                            <constraint firstItem="vvr-2x-K2j" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="tA7-fs-okm"/>
+                            <constraint firstItem="qwg-TA-Aow" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xOF-0A-qHb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="callButton" destination="ldH-uc-bKt" id="QvG-ak-7DJ"/>
+                        <outlet property="cameraButton" destination="slF-4O-W92" id="cNQ-ts-xz6"/>
+                        <outlet property="controlButtonView" destination="vvr-2x-K2j" id="Xh0-N2-f0V"/>
+                        <outlet property="micButton" destination="RQk-8b-Meg" id="nfT-As-ZJu"/>
+                        <outlet property="myVidyoView" destination="qwg-TA-Aow" id="Oid-hZ-P3x"/>
+                        <outlet property="switchCameraButton" destination="JBR-dj-ejl" id="0di-Vn-IXi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="129" y="98"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="camera.viewfinder" catalog="system" width="128" height="115"/>
+        <image name="mic.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="phone.circle.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
